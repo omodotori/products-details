@@ -1,0 +1,17 @@
+import { HashRouter, Route, Routes } from "react-router-dom";
+import ProductList from "./ProductList";
+import ProductDetail from "./ProductDetail";
+import "./App.css";
+
+function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+      </Routes>
+    </HashRouter>
+  );
+}
+
+export default App;
